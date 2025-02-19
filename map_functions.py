@@ -46,7 +46,7 @@ def get_address(lat, lon):
     data = response.json()
     address = data.get("address", {})
 
-    street = address.get("road", "Неизвестная улица")
+    street = address.get("road", "")
     house_number = address.get("house_number", "№ не указан")
     apartment = address.get("hamlet", "")  # Иногда используется в OSM как номер квартиры
 
